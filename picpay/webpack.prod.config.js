@@ -4,7 +4,7 @@ var BundleTracker = require('webpack-bundle-tracker')
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 var config = require('./webpack.base.config.js')
 
-config.output.path = require('path').resolve('./static/dist/js')
+config.output.path = require('path').resolve('./static/dist')
 
 config.plugins = config.plugins.concat([
   new BundleTracker({filename: './webpack-stats-prod.json'}),
