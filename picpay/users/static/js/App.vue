@@ -40,7 +40,7 @@
       </tbody>
 
     </table>
-    <b-loading :active.sync="isLoading" :canCancel="true"></b-loading>
+    <b-loading :active.sync="isLoading" :canCancel="false"></b-loading>
     <v-paginator :resource_url="resource_url" ref="vpaginator" @update="updateResource" @request_start="startLoading" @request_finish="finishLoading" @request_error="errorLoading"></v-paginator>
   </div>
 </template>
