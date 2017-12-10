@@ -29,5 +29,4 @@ class UsersPicpayListView(generics.ListAPIView):
         en_ids = enumerate(order_ids)
         preserved = Case(*[When(pk=pk, then=pos) for pos, pk in en_ids])
         queryset = queryset.order_by(preserved)
-        print
         return queryset
