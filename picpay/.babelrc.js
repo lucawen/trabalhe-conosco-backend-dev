@@ -1,4 +1,4 @@
-/*
-    ./.babelrc
-*/
-{ presets: ['es2015', { modules: false }] }
+{
+  "presets": [ "es2015", "stage-0"],
+  "plugins": ["transform-runtime"]
+}

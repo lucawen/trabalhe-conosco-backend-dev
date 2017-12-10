@@ -6,42 +6,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Bulma!</title>
+  <title>Picpay Users</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/buefy.min.css' %}">
 </head>
 <body>
   <section class="hero is-small is-dark  is-bold">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="subtitle">
-        <div class="columns">
-          <div class="column is-three-fifths">
-            <img src="{% static 'images/picpay.png' %}" style="max-width: 70vh;" class="has-text-centered	"/>
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="subtitle">
+          <div class="columns">
+            <div class="column is-three-fifths">
+              <img src="{% static 'images/picpay.png' %}" style="max-width: 70vh;" class="has-text-centered	"/>
+            </div>
+            <div class="column">
+              <h>Teste Backend para Picpay</p>
+                <br />
+              <p>Backend: Django 2.0, Django Rest Framework 3.7.3</p>
+              <p>Frontend: Vuejs 2.0, Lodash, Buefy (Bulma)</p>
+              <p>Database: Postgres 9.6</p>
+              <p>Infra: Docker, Docker Compose</p>
+              <p>
+                <br/>
+                <a class="button is-primary" href="https://github.com/PicPay/trabalhe-conosco-backend-dev">Repositório Picpay</a>
+                <a class="button is-primary" href="https://github.com/lucawen/trabalhe-conosco-backend-dev">Repositório deste Projeto</a>
+              </p>
+            </div>
           </div>
-          <div class="column">
-            <h>Teste Backend para Picpay</p>
-              <br />
-            <p>Backend: Django 2.0, Django Rest Framework 3.7.3</p>
-            <p>Frontend: Vuejs 2.0, Lodash, Buefy (Bulma)</p>
-            <p>Database: Postgres 9.6</p>
-            <p>Infra: Docker, Docker Compose</p>
-            <p>
-              <br/>
-              <a class="button is-primary" href="https://github.com/PicPay/trabalhe-conosco-backend-dev">Repositório Picpay</a>
-              <a class="button is-primary" href="https://github.com/lucawen/trabalhe-conosco-backend-dev">Repositório deste Projeto</a>
-            </p>
-          </div>
-        </div>
-      </h2>
+        </h2>
+      </div>
     </div>
-  </div>
-</section>
-<section class="section">
+  </section>
+  <section class="section">
     <div class="container">
       <div id="app"></div>
     </div>
   </section>
-  {% render_bundle 'main' %}
+  {% render_bundle 'users' %}
 </body>
 </html>

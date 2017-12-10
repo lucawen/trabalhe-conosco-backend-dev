@@ -1,3 +1,15 @@
+<template>
+  <section>
+    <b-pagination
+        :total="count"
+        :current.sync="current_page"
+        :per-page="page_size"
+        @change='changeOptions'>
+    </b-pagination> <p class="is-size-7	">Total de {{last_page}} páginas</p>
+  </section>
+</template>
+
+<script>
 import axios from 'axios';
 
 export default {
@@ -14,15 +26,6 @@ export default {
       }
     }
   },
-  template: `
-  <section>
-    <b-pagination
-        :total="count"
-        :current.sync="current_page"
-        :per-page="page_size"
-        @change='changeOptions'>
-    </b-pagination> <p class="is-size-7	">Total de {{last_page}} páginas</p>
-  </section>`,
   data () {
     return {
       current_page: '',
@@ -131,3 +134,4 @@ export default {
     this.fetchData()
   }
 }
+</script>

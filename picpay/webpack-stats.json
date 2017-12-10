@@ -1,1 +1,1 @@
-{"status":"done","chunks":{"main":[{"name":"main-8c666a7c5d1250883f8c.js","path":"/home/lalbuquerque/projetos/trabalhe-conosco-backend-dev/picpay/static/bundles/main-8c666a7c5d1250883f8c.js"}]}}
+{"status":"done","publicPath":"http://127.0.0.1:3000/static/bundles/","chunks":{"users":[{"name":"users-13da01cccf0fde4f91e9.js","publicPath":"http://127.0.0.1:3000/static/bundles/users-13da01cccf0fde4f91e9.js","path":"/home/lalbuquerque/projetos/trabalhe-conosco-backend-dev/picpay/static/bundles/users-13da01cccf0fde4f91e9.js"}]}}

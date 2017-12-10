@@ -1,15 +1,5 @@
-import Vue from '../libs/vue.js';
-import Buefy from '../libs/buefy.min.js';
-import _ from '../libs/lodash.min.js';
-import VuePaginator from '../components/paginator.js'
-
-
-Vue.use(Buefy.default, {
-    defaultIconPack: 'fa'
-})
-new Vue({
-  el: '#app',
-  template: `<div>
+<template>
+  <div class="app">
     <b-field label="Pesquisa">
         <b-input v-model="search" :disabled="isLoading"></b-input>
     </b-field>
@@ -52,7 +42,13 @@ new Vue({
     </table>
     <b-loading :active.sync="isLoading" :canCancel="true"></b-loading>
     <v-paginator :resource_url="resource_url" ref="vpaginator" @update="updateResource" @request_start="startLoading" @request_finish="finishLoading" @request_error="errorLoading"></v-paginator>
-    </div>`,
+  </div>
+</template>
+
+<script>
+var _ = require('lodash');
+import VuePaginator from './components/Paginator.vue'
+export default {
   data () {
     return {
       users: [],
@@ -99,4 +95,5 @@ new Vue({
       return url + (url.indexOf('?')>0 ? '&' : '?') + paramName + '=' + paramValue
     }
   }
-});
+}
+</script>
