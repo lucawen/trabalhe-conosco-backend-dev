@@ -22,17 +22,15 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [{
-            loader: 'css-loader',
-            options: {
-              minimize: true
-            }
-          }, 'css-loader' ]
+        loader: [
+          'style-loader',
+          { loader: 'css-loader', options: { minimize: true } }
+        ]
       }
     ]
   },
   resolve: {
-    alias: {
-    }
+    modules: ['node_modules'],
+    extensions: ['.css', '.js']
   }
 }
