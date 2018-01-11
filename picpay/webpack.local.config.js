@@ -2,6 +2,7 @@ var path = require("path")
 var webpack = require('webpack')
 var BundleTracker = require('webpack-bundle-tracker')
 var config = require('./webpack.base.config.js')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 config.devServer = {
   contentBase: path.join(__dirname, "static", "bundles"),
@@ -19,6 +20,10 @@ config.devServer = {
 config.output.publicPath = 'http://127.0.0.1:3000/static/bundles/'
 config.plugins = [
   new BundleTracker({filename: './webpack-stats.json'}),
+  new ExtractTextPlugin({
+    disable: false,
+    filename: '[name]-[hash].css'
+  }),
 ]
 
 config.resolve.alias['vue$'] = 'vue/dist/vue.esm.js'
