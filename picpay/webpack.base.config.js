@@ -17,17 +17,20 @@ module.exports = {
   module: {
     rules: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader'
-      },
+      { test: /\.vue$/, loader: 'vue-loader' },
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: { loader: 'css-loader', options: { minimize: true, sourceMap: true } }
         })
-
+      },
+      {
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|json|xml|ico)$/,
+        loader: 'file-loader',
+        query: {
+          name: 'images/[name].[ext]'
+        },
       }
     ]
   },
