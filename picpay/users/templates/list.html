@@ -1,4 +1,4 @@
-{% load static %}
+{% load webpack_static from webpack_loader %}
 {% load render_bundle from webpack_loader %}
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
         <h2 class="subtitle">
           <div class="columns">
             <div class="column is-three-fifths">
-              <img src="{% static 'images/picpay.png' %}" style="max-width: 70vh;" class="has-text-centered	"/>
+              <img src="{% webpack_static 'images/picpay.png' %}" style="max-width: 70vh;" class="has-text-centered	"/>
             </div>
             <div class="column">
               <h>Teste Backend para Picpay</p>
